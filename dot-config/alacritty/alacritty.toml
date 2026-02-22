@@ -1,0 +1,11 @@
+[general]
+import = [
+"~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[window]
+padding = { x = 15, y = 5 }
+dynamic_padding = true
+
+[font]
+normal = { family = "Inconsolata" }
