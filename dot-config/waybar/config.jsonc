@@ -2,6 +2,7 @@
     "layer": "top",
     "position": "top",
     "spacing": 0,
+    // "width":1200,
 
     "modules-left": [
         "hyprland/workspaces", 
@@ -10,11 +11,15 @@
     "modules-center": [
         "custom/slant-left-surface",
         "clock",
-        "custom/slant-right-surface"
+        "custom/slant-right-surface-base",
+        "tray",
+        "custom/slant-right-base"
     ],
+
     "modules-right": [
-        "custom/slant-left-surface",
-        "tray", 
+        "custom/slant-left-base",
+        "custom/music",
+        "custom/slant-left-surface-base",
         "pulseaudio", 
         "custom/notification",
 		"custom/spacer"
@@ -22,7 +27,7 @@
 
     "clock": {
         "interval": 60,
-        "format": "{:%H.%M}",
+        "format": "{:%H:%M}",
         "tooltip-format": "{:%Y-%m-%d}"
     },
 
@@ -74,6 +79,43 @@
         "format": "",
         "tooltip": false
     },
+
+    "custom/slant-left-surface-base": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/slant-left-base": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/slant-right-surface-base": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/slant-right-base": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "custom/music": {
+        "format": "\uf001  {}",
+        "return-type": "json",
+        "max-length": 30,
+        "escape": true,
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}'",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "interval": 1
+    },
+
+    "pulseaudio": {
+        "format": "\uf028  {} {}%"
+    },
+
 	"custom/spacer": {
 		"format": "  ",
     	"tooltip": false
