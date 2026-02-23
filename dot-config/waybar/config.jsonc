@@ -1,0 +1,81 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 0,
+
+    "modules-left": [
+        "hyprland/workspaces", 
+        "custom/slant-right-mauve"
+    ],
+    "modules-center": [
+        "custom/slant-left-surface",
+        "clock",
+        "custom/slant-right-surface"
+    ],
+    "modules-right": [
+        "custom/slant-left-surface",
+        "tray", 
+        "pulseaudio", 
+        "custom/notification",
+		"custom/spacer"
+    ],
+
+    "clock": {
+        "interval": 60,
+        "format": "{:%H.%M}",
+        "tooltip-format": "{:%Y-%m-%d}"
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 4
+        }
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+
+    "custom/notification": {
+        "tooltip": true,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󰂠",
+            "dnd-none": "󰪓"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "escape": true
+    },
+
+    "custom/slant-right-mauve": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/slant-left-surface": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/slant-right-surface": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/slant-right-surface-end": {
+        "format": "",
+        "tooltip": false
+    },
+	"custom/spacer": {
+		"format": "  ",
+    	"tooltip": false
+	}
+}
