@@ -6,8 +6,11 @@
 
     "modules-left": [
         "hyprland/workspaces", 
-        "custom/slant-right-mauve"
+        "custom/slant-right-mauve-base",
+        "hyprland/window",
+        "custom/slant-right-base"
     ],
+
     "modules-center": [
         "custom/slant-left-surface",
         "clock",
@@ -24,6 +27,11 @@
         "custom/notification",
 		"custom/spacer"
     ],
+
+    "hyprland/window": {
+        "format": "\uf2d0  {}",
+        "max-length":20
+    },
 
     "clock": {
         "interval": 60,
@@ -64,6 +72,10 @@
     },
 
     "custom/slant-right-mauve": {
+        "format": "",
+        "tooltip": false
+    },
+    "custom/slant-right-mauve-base": {
         "format": "",
         "tooltip": false
     },

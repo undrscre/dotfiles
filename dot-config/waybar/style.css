@@ -13,12 +13,23 @@ window#waybar {
     border-radius: 0px 10px 0px 10px;
 }
 
+#window {
+    padding: 0px 10px;
+    background: @base;
+}
+
 #workspaces {
     background: @mauve;
     color: @crust;
     padding-left: 10px;
     padding-right:10px;
     /* margin: 5px 0; */
+}
+
+#custom-slant-right-mauve-base {
+    color: @mauve;
+    background: @base;
+    font-size: 26px;
 }
 
 #custom-slant-right-mauve {
