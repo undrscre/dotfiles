@@ -70,6 +70,10 @@ window#waybar {
     font-size: 26px;
 }
 
+#bluetooth {
+    background: @base;
+    padding: 0 10px;
+}
 
 #custom-slant-right-surface-base {
     color: @surface0;
@@ -97,6 +101,7 @@ window#waybar {
 
 #custom-music {
     background: @base;
+    padding: 0 10px;
 }
 
 #pulseaudio {

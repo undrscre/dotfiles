@@ -24,13 +24,18 @@
         "custom/music",
         "custom/slant-left-surface-base",
         "pulseaudio", 
+        "custom/slant-right-surface-base",
+        "bluetooth",
+        "custom/slant-left-surface-base",
         "custom/notification",
 		"custom/spacer"
     ],
 
     "hyprland/window": {
-        "format": "\uf2d0  {}",
-        "max-length":20
+        "format": "{}",
+        "max-length":20,
+        "icon":true,
+        "icon-size":20
     },
 
     "clock": {
@@ -38,6 +43,7 @@
         "format": "{:%H:%M}",
         "tooltip-format": "{:%Y-%m-%d}"
     },
+
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -48,6 +54,17 @@
         "persistent-workspaces": {
             "*": 4
         }
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-disabled": " off",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "tooltip-format": "{controller_alias}\t{status}",
+        "tooltip-format-connected": "{controller_alias}\t{status}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager" 
     },
 
     "tray": {
@@ -125,7 +142,8 @@
     },
 
     "pulseaudio": {
-        "format": "\uf028  {} {}%"
+        "format": "\uf028  {} {}%",
+        "on-click":"pavucontrol",
     },
 
 	"custom/spacer": {
